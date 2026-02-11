@@ -30,8 +30,11 @@ napoleon_numpy_docstring = False
 napoleon_include_private_members = False
 napoleon_include_special_members = False
 
+
+# List of all different themes to try:
+list_themes = [ 'sphinx_rtd_theme', 'alabaster', 'classic', 'sphinxdoc', 'scrolls', 'agogo', 'traditional', 'nature', 'haiku', 'pyramid', 'bizstyle', 'furo' ]
 # HTML theme
-html_theme = 'sphinx_rtd_theme'
+html_theme = list_themes[1]  # Change the index to try different themes
 html_theme_options = {
     'logo_only': False,
 }

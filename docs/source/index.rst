@@ -1,9 +1,9 @@
 Land Ownership Documentation
 =============================
 
-New modification
 
-Welcome to the Land Ownership documentation. This project is a data journalism collaboration focused on analyzing land ownership patterns.
+This project is aimed to analyze land ownership patterns in european countries using data from eurostats and other sources and try to correlate it with the distribution of farm subsidies. The project is a part of a data journalism collaboration between SISSA and the italian journal FACTA.
+
 
 .. toctree::
    :maxdepth: 2
@@ -11,22 +11,10 @@ Welcome to the Land Ownership documentation. This project is a data journalism c
 
    getting_started
    modules
-   contributing
 
-Overview
---------
 
-The Land Ownership project analyzes and visualizes farm subsidy data across European countries to understand patterns of land ownership and agricultural support distribution.
-
-**Project Information:**
+**Documentation Information:**
 
 * **Version:** 0.0.1
 * **Author:** Cristopher Erazo
 * **Description:** Data-Journalism collaboration
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
