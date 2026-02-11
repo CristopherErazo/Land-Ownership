@@ -1,6 +1,6 @@
 # Documentation
 
-This directory contains the Sphinx documentation source for the Land Ownership project.
+This directory contains the Sphinx documentation source for the Land Ownership project. -
 
 ## Building Documentation Locally
 
