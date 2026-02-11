@@ -8,7 +8,6 @@ This section documents the Python API of the Land Ownership project.
    :caption: Modules:
 
    api/configurations
-   api/land_ownership
 
 Overview
 --------

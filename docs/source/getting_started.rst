@@ -103,4 +103,4 @@ More Information
 
 For more details about the project modules and API, see the :doc:`modules` documentation.
 
-To contribute to the project, see :doc:`contributing`.
+To contribute to the project, see
