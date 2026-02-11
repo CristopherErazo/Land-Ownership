@@ -36,11 +36,17 @@ html_theme_options = {
     'logo_only': False,
 }
 
-# HTML static path
-html_static_path = ['_static']
+# HTML static path (only include if directory exists)
+if os.path.isdir('_static'):
+    html_static_path = ['_static']
+else:
+    html_static_path = []
 
 # Templates path
-templates_path = ['_templates']
+if os.path.isdir('_templates'):
+    templates_path = ['_templates']
+else:
+    templates_path = []
 
 # Source suffix
 source_suffix = '.rst'

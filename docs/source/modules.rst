@@ -10,10 +10,7 @@ This section documents the Python API of the Land Ownership project.
    api/configurations
    api/land_ownership
 
-Main Modules
-------------
+Overview
+--------
 
-.. automodule:: land_ownership
-   :members:
-   :undoc-members:
-   :show-inheritance:
+The modules are documented in detail in the API section above. Use the :doc:`api/land_ownership` for the main Land Ownership module and :doc:`api/configurations` for configuration utilities.
