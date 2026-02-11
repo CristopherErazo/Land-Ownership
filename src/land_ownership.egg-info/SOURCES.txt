@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+requirements.txt
+src/configurations/__init__.py
+src/configurations/data_config.py
+src/configurations/plot_config.py
+src/land_ownership/__init__.py
+src/land_ownership.egg-info/PKG-INFO
+src/land_ownership.egg-info/SOURCES.txt
+src/land_ownership.egg-info/dependency_links.txt
+src/land_ownership.egg-info/requires.txt
+src/land_ownership.egg-info/top_level.txt
