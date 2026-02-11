@@ -34,7 +34,7 @@ napoleon_include_special_members = False
 # List of all different themes to try:
 list_themes = [ 'sphinx_rtd_theme', 'alabaster', 'classic', 'sphinxdoc', 'scrolls', 'agogo', 'traditional', 'nature', 'haiku', 'pyramid', 'bizstyle', 'furo' ]
 # HTML theme
-html_theme = list_themes[2]  # Change the index to try different themes
+html_theme = list_themes[0]  # Change the index to try different themes
 html_theme_options = {
     'logo_only': False,
 }
