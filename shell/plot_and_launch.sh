@@ -3,7 +3,10 @@
 # This script runs the entire workflow: from extracting files to creating plots and launching the documentation server.
 
 # Ask if the user wants to create plots or not
-read -p "Do you want to create plots? (y/n) " create_plots
+
+create_plots=$1
+
+
 if [[ "$create_plots" == "y" ]]; then
     echo "Creating plots..."
     python ./scripts/create_plots.py
