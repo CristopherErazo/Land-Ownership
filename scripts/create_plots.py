@@ -2,6 +2,7 @@ import pandas as pd
 import geopandas as gpd
 import plotly.graph_objects as go
 from pathlib import Path
+
 def create_map_plot(dataframe: pd.DataFrame, variable: str, year: int,color_scale: str = 'Greens',amin: float = 1.0, amax: float = 0.5):
     
     # Filter the DataFrame for the specified year
