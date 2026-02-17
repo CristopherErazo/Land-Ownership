@@ -1,18 +1,25 @@
 name: Build and Deploy Documentation
 
 on:
-  workflow_dispatch:
+  push:
     branches: [ main, master ]
     paths:
       - 'docs/**'
       - 'src/**'
+      - 'scripts/**'
+      - 'data/**'
       - '.github/workflows/build-docs.yml'
       - 'requirements.txt'
+
+  workflow_dispatch:
+
   pull_request:
     branches: [ main, master ]
     paths:
       - 'docs/**'
       - 'src/**'
+      - 'scripts/**'
+      - 'data/**'
 
 permissions:
   contents: read
@@ -26,7 +33,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -41,18 +48,24 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install sphinx sphinx_rtd_theme sphinx-autodoc-typehints
+        pip install plotly pandas
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+
+    - name: Generate interactive plots
+      run: |
+        python scripts/generate_plots.py
 
     - name: Build documentation
       run: |
         cd docs
-        sphinx-build -W --keep-going -T -b html source build/html
+        sphinx-build -W --keep-going -T -b html . _build/html
 
     - name: Upload artifact
       if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
       uses: actions/upload-pages-artifact@v3
       with:
-        path: 'docs/build/html'
+        path: 'docs/_build/html'
 
   deploy:
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
@@ -60,9 +73,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Deploy to GitHub Pages
       id: deployment

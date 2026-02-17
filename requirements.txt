@@ -1,6 +1,5 @@
 numpy
 matplotlib
+pandas
 pytest
-sphinx
-sphinx_rtd_theme
-sphinx-autodoc-typehints
+plotly

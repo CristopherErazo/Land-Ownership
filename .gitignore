@@ -5,4 +5,11 @@ env/
 .dat
 log/
 logs/
-data/
+*.egg-info/
+data_raw/
+docs/_build/
+docs/_static/plots/
+src/configurations
+notebooks/
+
+
