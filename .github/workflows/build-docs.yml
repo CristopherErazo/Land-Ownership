@@ -47,14 +47,14 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install sphinx sphinx_rtd_theme sphinx-autodoc-typehints
+        pip install sphinx sphinx_rtd_theme sphinx-autodoc-typehints shibuya
         pip install plotly pandas
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
 
     - name: Generate interactive plots
       run: |
-        python scripts/create_plots.py
+        bash shell/create_plots.sh  
 
     - name: Build documentation
       run: |
