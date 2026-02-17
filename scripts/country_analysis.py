@@ -19,8 +19,15 @@ def main():
     results['total'] = []
     results['count'] = []
     results['mean'] = []
+    results['std'] = []
     results['max'] = []
+    results['min'] = []
     results['gini'] = []
+
+    # Include quantiles
+    quantiles = [0.25, 0.5, 0.75]
+    for q in quantiles:
+        results[f'q_{int(q*100)}%'] = []
 
     # Loop through each country and year
     for year in years:
@@ -45,6 +52,9 @@ def main():
             # Group by recipient_name and calculate the total amount for each recipient
             df_recipients = df.groupby("recipient_name_fixed", as_index=False).agg({"amount": "sum"})
 
+            # Eliminate rows with non-positive amounts (if any)
+            df_recipients = df_recipients[df_recipients['amount'] > 0.1]
+
             # Sort descending
             df_sorted = df_recipients.sort_values("amount", ascending=False)
 
@@ -61,14 +71,23 @@ def main():
             # Gini coefficient
             gini_value = compute_gini(df_sorted["amount"])
 
+            # Compute quantiles
+            for q in quantiles:
+                quantile_value = df_sorted["amount"].quantile(q)
+                results[f'q_{int(q*100)}%'].append(quantile_value)
+
             # Append the results 
             results['country'].append(country)
             results['year'].append(year)
             results['total'].append(total_subsidy)
             results['count'].append(df_sorted.shape[0])
             results['mean'].append(df_sorted['amount'].mean())
+            results['std'].append(df_sorted['amount'].std())
             results['max'].append(df_sorted['amount'].max())
+            results['min'].append(df_sorted['amount'].min())
             results['gini'].append(gini_value)
+
+        
 
 
     # Convert results to a DataFrame

@@ -174,7 +174,7 @@ if __name__ == "__main__":
 
     # Settings for figure layout
     settings['color_scale'] = 'Greens'
-    settings['width'] = 470 # width of the map in pixels
+    settings['width'] = 400 # width of the map in pixels
     settings['height_proportion'] = 1.2
 
     # Create figures for both years

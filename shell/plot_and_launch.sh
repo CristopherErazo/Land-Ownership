@@ -9,7 +9,8 @@ create_plots=$1
 
 if [[ "$create_plots" == "y" ]]; then
     echo "Creating plots..."
-    python ./scripts/create_plots.py
+    python ./scripts/europe_map_plots.py
+    python ./scripts/box_plots.py
     echo "Plots created successfully."
 else
     echo "Skipping plot creation."
