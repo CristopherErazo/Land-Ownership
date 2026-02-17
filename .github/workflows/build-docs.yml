@@ -54,7 +54,7 @@ jobs:
 
     - name: Generate interactive plots
       run: |
-        bash shell/create_plots.sh  
+        bash shell/plot_and_launch.sh  
 
     - name: Build documentation
       run: |

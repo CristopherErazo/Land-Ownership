@@ -18,4 +18,4 @@ sphinx-build -b html docs docs/_build/html
 echo "Documentation built successfully."
 
 # Open the documentation in the default web browser
-start docs/_build/html/index.html
+# start docs/_build/html/index.html
