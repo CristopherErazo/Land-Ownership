@@ -11,6 +11,6 @@ docs/_build/
 docs/_static/plots/
 src/configurations
 notebooks/
-data/
+# data/
 
 
