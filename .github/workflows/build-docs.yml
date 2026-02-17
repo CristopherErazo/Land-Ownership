@@ -1,7 +1,7 @@
 name: Build and Deploy Documentation
 
 on:
-  push:
+  push: #workflow_dispatch:
     branches: [ main, master ]
     paths:
       - 'docs/**'
@@ -54,7 +54,7 @@ jobs:
 
     - name: Generate interactive plots
       run: |
-        python scripts/generate_plots.py
+        python scripts/create_plots.py
 
     - name: Build documentation
       run: |
