@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.abspath('../../src'))
 
 # Project information
 project = 'Land Ownership'
-copyright = '2026, Cristopher Erazo'
+copyright = 'Cristopher Erazo, 2026'
 author = 'Cristopher Erazo'
 release = '0.0.1'
 
@@ -31,10 +31,8 @@ napoleon_include_private_members = False
 napoleon_include_special_members = False
 
 
-# List of all different themes to try:
-# list_themes = [ 'sphinx_rtd_theme', 'alabaster', 'classic', 'sphinxdoc', 'scrolls', 'agogo', 'traditional', 'nature', 'haiku', 'pyramid', 'bizstyle', 'furo' ]
-# HTML theme
-html_theme = 'sphinx_rtd_theme'  # Change the index to try different themes
+
+html_theme = 'shibuya'  
 html_theme_options = {
     'logo_only': False,
 }
@@ -66,5 +64,37 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # Pygments options
 pygments_style = 'sphinx'
 
+
+# --------------------------------------------------
+
+# Logo & favicon
+# html_logo = "_static/logo.png"
+# html_favicon = "_static/favicon.ico"
+
 # HTML title
 html_title = "Land-Ownership Documentation"
+
+
+# -- Shibuya Theme Options ---------------------------------------------------
+
+html_theme_options = {
+
+    # Repository link (top-right corner)
+    "github_url": "https://github.com/CristopherErazo/Land-Ownership",
+
+    # Layout options
+    # "page_layout": "default", 
+    "page_layout": "compact",
+
+    # Color scheme (you can customize these colors in your custom CSS)
+    "accent_color": "green",
+    # Optional announcement banner
+    # "announcement": "🚀 New version released!",
+
+}
+
+# -- Custom CSS --------------------------------------------------------------
+
+html_css_files = [
+    "custom.css",
+]

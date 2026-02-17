@@ -1,28 +1,28 @@
 import pandas as pd
 from pathlib import Path
+import numpy as np
 
 from land_ownership.utils import countries , clean_dataframe
-
-years = [2024,2023]
-
+from land_ownership.measures import compute_gini
 
 
 def main():
 
-    # Create empty dict to store results
-    results = {
-        'country': [],
-        'year': [],
-        'count': [],
-        'mean': [],
-        'std': [],
-        'min': [],
-        '25%': [],
-        '50%': [],
-        '75%': [],
-        'max': []
-    }
+    # Years to analyze
+    years = [2024,2023]
 
+    # Share percentages
+    percentages = [1, 5, 10]
+    results = {f'Top {p}%': [] for p in percentages}
+    results['country'] = []
+    results['year'] = []
+    results['total'] = []
+    results['count'] = []
+    results['mean'] = []
+    results['max'] = []
+    results['gini'] = []
+
+    # Loop through each country and year
     for year in years:
         for abbr , country in zip(countries['abbreviations'], countries['names']):
             print(f"Processing data for {country} in {year}...")
@@ -43,24 +43,33 @@ def main():
             df['recipient_name_fixed'] = df['recipient_name'].str.strip().str.lower()
 
             # Group by recipient_name and calculate the total amount for each recipient
-            df_group = df.groupby("recipient_name_fixed", as_index=False).agg({"amount": "sum"})
+            df_recipients = df.groupby("recipient_name_fixed", as_index=False).agg({"amount": "sum"})
 
-            # Generate summary statistics for the amount column
-            summary_df = df_group.describe()
-            print(f'Total amont: {summary_df.loc['count', 'amount']}, Mean: {summary_df.loc['mean', 'amount']}, Std: {summary_df.loc['std', 'amount']}, Min: {summary_df.loc['min', 'amount']}, 25%: {summary_df.loc['25%', 'amount']}, 50%: {summary_df.loc['50%', 'amount']}, 75%: {summary_df.loc['75%', 'amount']}, Max: {summary_df.loc['max', 'amount']}\n')
+            # Sort descending
+            df_sorted = df_recipients.sort_values("amount", ascending=False)
+
+            # Total subsidy
+            total_subsidy = df_sorted["amount"].sum()
+            counts = df_sorted.shape[0]
+
+            # Top p% shares
+            for p in percentages:
+                top_n = int(np.ceil(p * counts / 100))
+                share = df_sorted.iloc[:top_n]["amount"].sum() / total_subsidy # Share is between 0 and 1
+                results[f'Top {p}%'].append(share)
             
+            # Gini coefficient
+            gini_value = compute_gini(df_sorted["amount"])
+
             # Append the results 
             results['country'].append(country)
             results['year'].append(year)
-            results['count'].append(summary_df.loc['count', 'amount'])
-            results['mean'].append(summary_df.loc['mean', 'amount'])    
-            results['std'].append(summary_df.loc['std', 'amount'])
-            results['min'].append(summary_df.loc['min', 'amount'])
-            results['25%'].append(summary_df.loc['25%', 'amount'])
-            results['50%'].append(summary_df.loc['50%', 'amount'])
-            results['75%'].append(summary_df.loc['75%', 'amount'])
-            results['max'].append(summary_df.loc['max', 'amount'])
-            # break
+            results['total'].append(total_subsidy)
+            results['count'].append(df_sorted.shape[0])
+            results['mean'].append(df_sorted['amount'].mean())
+            results['max'].append(df_sorted['amount'].max())
+            results['gini'].append(gini_value)
+
 
     # Convert results to a DataFrame
     results_df = pd.DataFrame(results)
@@ -68,7 +77,7 @@ def main():
     # Save the results to a CSV file
     dir_path = './data/global_analysis/'
     Path(dir_path).mkdir(parents=True, exist_ok=True)
-    file_path = dir_path + 'summary_statistics.csv'
+    file_path = dir_path + 'summary_statistics_per_country.csv'
     results_df.to_csv(file_path, index=False)
 
 

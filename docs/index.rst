@@ -9,7 +9,7 @@ This project is aimed to analyze land ownership patterns in european countries u
    :maxdepth: 2
    :caption: Contents:
 
-   getting_started
+
    plots
 
 

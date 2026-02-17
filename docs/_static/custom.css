@@ -1,0 +1,14 @@
+/* Increase content width */
+.md-content {
+    max-width: 900px;
+}
+
+/* Round code blocks */
+pre {
+    border-radius: 8px;
+}
+
+/* Slightly larger headings */
+h1, h2, h3 {
+    font-weight: 600;
+}
