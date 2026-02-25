@@ -85,7 +85,8 @@ def create_figure_with_dropdown(year: int, countries: list, settings:dict):
     
     # Create initial map with first variable
     first_country = countries[0]
-    dir_path = f'./data/farm_subsidy_top_bottom/{year}/{first_country.lower().replace(' ','_')}.csv'
+    first_country_formatted = first_country.lower().replace(' ', '_')
+    dir_path = f'./data/farm_subsidy_top_bottom/{year}/{first_country_formatted}.csv'
     dataframe = pd.read_csv(dir_path)
     initial_table = create_table(dataframe,settings)
     
@@ -96,7 +97,8 @@ def create_figure_with_dropdown(year: int, countries: list, settings:dict):
     buttons = []
     for country in countries:
         # load data for the country and year and create the table
-        dir_path = f'./data/farm_subsidy_top_bottom/{year}/{country.lower().replace(' ','_')}.csv'
+        country_formatted = country.lower().replace(' ', '_')
+        dir_path = f'./data/farm_subsidy_top_bottom/{year}/{country_formatted}.csv'
         if not Path(dir_path).exists():
             print(f"Data file for {country} in {year} not found at {dir_path}. Skipping.")
             continue
