@@ -54,6 +54,9 @@ if __name__ == "__main__":
     # Load dataframe
     filename = './data/global_analysis/aggregated_schemes.csv'
     agg_schemes = pd.read_csv(filename)
+    # sort alphabetically by scheme name
+    agg_schemes = agg_schemes.sort_values(by='scheme')
+    
     
     # Configure settings
     settings = {
