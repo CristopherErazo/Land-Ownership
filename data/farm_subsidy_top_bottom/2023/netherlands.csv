@@ -1,0 +1,53 @@
+rank,recipient_name,amount,fraction,address,scheme_id,scheme,scheme_1,counts,latitude,longitude
+1,coöperatie harvest house u.a.,20045113.380000003,0.022358908503721405,WESTLAND,97805dfaccd02b7468dfb07b58bd8cfca984800d _&_ 8c54bfd65b64a15bfd5e77052095ec1e8374d857,"IV.6 EAGF _&_ III.1 - Public Intervention Chapter I, Section 2",EAGF,2,,
+2,coöperatie growers united u.a.,15383144.48,0.017158811397446284,WESTLAND,97805dfaccd02b7468dfb07b58bd8cfca984800d,IV.6 EAGF,EAGF,1,,
+3,telerscoöperatie oxin growers u.a.,13724835.64,0.015309084986745762,BARENDRECHT,97805dfaccd02b7468dfb07b58bd8cfca984800d _&_ 8c54bfd65b64a15bfd5e77052095ec1e8374d857,"IV.6 EAGF _&_ III.1 - Public Intervention Chapter I, Section 2",EAGF,2,,
+4,hoogheemraadschap hollands noorderkwartier,8297526.299999999,0.009255304663630792,DIJK EN WAARD,96e830420e116b9c67d7761fcd217e51d748257a,"I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",EAFRD _&_ National,2,,
+5,coöperatie natuurrijk limburg u.a.,7531902.220000001,0.008401305066399986,ROERMOND,55ee0e9e03e82e9028e85776f66a78737f276e32 _&_ ddfdb97f46cfeb55934bcc18cb4d733562f7a8d4 _&_ 96e830420e116b9c67d7761fcd217e51d748257a,"VI.15 EAFRD _&_ VI.15 National _&_ VI.21 EAFRD _&_ I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",EAFRD _&_ National,4,,
+6,veiling zon,5724854.08,0.006385670469671156,VENLO,97805dfaccd02b7468dfb07b58bd8cfca984800d _&_ 8c54bfd65b64a15bfd5e77052095ec1e8374d857,"IV.6 EAGF _&_ III.1 - Public Intervention Chapter I, Section 2",EAGF,2,,
+7,coöperatief boerennatuur veluwe u.a.,5491936.38,0.006125867222641718,LEUSDEN,55ee0e9e03e82e9028e85776f66a78737f276e32 _&_ 96e830420e116b9c67d7761fcd217e51d748257a _&_ 9e328d254aa6157ee3b4f7985edba31e37f7e706 _&_ ddfdb97f46cfeb55934bcc18cb4d733562f7a8d4,"VI.15 EAFRD _&_ VI.15 National _&_ I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+ _&_ I.1 - Single payment scheme – Title III _&_ VI.21 EAFRD",EAFRD _&_ National,5,,
+8,waterschap drents overijsselse delta,5045097.95,0.005627450507160086,ZWOLLE,96e830420e116b9c67d7761fcd217e51d748257a,"I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",National _&_ EAFRD,2,,
+9,waterschap zuiderzeeland,4728402.41,0.005274198995524254,LELYSTAD,96e830420e116b9c67d7761fcd217e51d748257a,"I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",National _&_ EAFRD,2,,
+10,fossa eugeniana,4654100.390000001,0.005191320338999455,HORST AAN DE MAAS,97805dfaccd02b7468dfb07b58bd8cfca984800d _&_ 8c54bfd65b64a15bfd5e77052095ec1e8374d857,"IV.6 EAGF _&_ III.1 - Public Intervention Chapter I, Section 2",EAGF,2,,
+11,rijnlandshuis,4576160.93,0.005104384375009937,LEIDEN,96e830420e116b9c67d7761fcd217e51d748257a,"I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",National _&_ EAFRD,2,,
+12,coöperatie koninklijke fruitmasters u.a.,4487679.21,0.0050056892644247414,WEST BETUWE,8c54bfd65b64a15bfd5e77052095ec1e8374d857,"III.1 - Public Intervention Chapter I, Section 2",EAGF,1,,
+13,noardlike fryske wâlden,4286358.26,0.0047811299608378904,ACHTKARSPELEN,55ee0e9e03e82e9028e85776f66a78737f276e32 _&_ 96e830420e116b9c67d7761fcd217e51d748257a _&_ 9e328d254aa6157ee3b4f7985edba31e37f7e706 _&_ ddfdb97f46cfeb55934bcc18cb4d733562f7a8d4,"VI.15 EAFRD _&_ VI.15 National _&_ I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+ _&_ I.1 - Single payment scheme – Title III _&_ VI.21 EAFRD",EAFRD _&_ National,6,,
+14,coöperatie 'agrarische natuur drenthe' u.a.,3984771.4,0.004444731114853182,AA EN HUNZE,55ee0e9e03e82e9028e85776f66a78737f276e32,VI.15 EAFRD _&_ VI.15 National,EAFRD _&_ National,2,,
+15,"ver. agr. natuur-/landsch.beh. water, land",3978326.36,0.004437542127845176,PURMEREND,55ee0e9e03e82e9028e85776f66a78737f276e32 _&_ ddfdb97f46cfeb55934bcc18cb4d733562f7a8d4 _&_ 96e830420e116b9c67d7761fcd217e51d748257a,"VI.15 EAFRD _&_ VI.15 National _&_ VI.21 EAFRD _&_ I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",EAFRD _&_ National,4,,
+16,coöperatieve agrarische natuur collectief noordwest overijssel u.a.,3906743.87,0.004357696914997667,ZWOLLE,55ee0e9e03e82e9028e85776f66a78737f276e32 _&_ 96e830420e116b9c67d7761fcd217e51d748257a _&_ ddfdb97f46cfeb55934bcc18cb4d733562f7a8d4,"VI.15 EAFRD _&_ I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+ _&_ VI.15 National _&_ VI.21 EAFRD _&_ VI.21 National",EAFRD _&_ National,5,,
+17,prolander,3879202.52,0.004326976483885844,ASSEN,96e830420e116b9c67d7761fcd217e51d748257a,"I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",National _&_ EAFRD,2,,
+18,coöperatieve vereniging agrarisch landschap achterhoek u.a.,3769635.32,0.004204762009297079,BRONCKHORST,55ee0e9e03e82e9028e85776f66a78737f276e32 _&_ ddfdb97f46cfeb55934bcc18cb4d733562f7a8d4 _&_ 9e328d254aa6157ee3b4f7985edba31e37f7e706,VI.15 EAFRD _&_ VI.15 National _&_ VI.21 National _&_ VI.21 EAFRD _&_ I.1 - Single payment scheme – Title III,EAFRD _&_ National,6,,
+19,collectief alblasserwaard/vijfheerenlanden coöperatieve u.a.,3639161.08,0.0040592272079243265,VIJFHEERENLANDEN,55ee0e9e03e82e9028e85776f66a78737f276e32 _&_ 96e830420e116b9c67d7761fcd217e51d748257a,"VI.15 EAFRD _&_ VI.15 National _&_ I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",EAFRD _&_ National,3,,
+20,hoofdkantoor wetterskip fryslân,3544907.18,0.0039540936381475865,LEEUWARDEN,96e830420e116b9c67d7761fcd217e51d748257a,"I.4 - Beef and veal payments –Title IV, Chapter 1, Section 11
+",EAFRD _&_ National,2,,
+42694,anoniem_735072409,351.08,3.9160494873122585e-07,RIJSSEN-HOLTEN,e494e36044d922b6495fa5ab9f9bb797de6a1a91 _&_ a88cdc4d55d3056d5362a34ca28b5dea865daf05,"II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5 _&_ II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3",EAGF,2,,
+42695,anoniem_979241747,350.49,3.9094684539366347e-07,DALFSEN,e494e36044d922b6495fa5ab9f9bb797de6a1a91 _&_ a88cdc4d55d3056d5362a34ca28b5dea865daf05,"II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5 _&_ II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3",EAGF,2,,
+42696,anoniem_734721910,343.02,3.8261458788249147e-07,GEMERT-BAKEL,e494e36044d922b6495fa5ab9f9bb797de6a1a91 _&_ a88cdc4d55d3056d5362a34ca28b5dea865daf05 _&_ c622603023459ffbd7d5413130ce7c1f7fa2d262,"II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5 _&_ II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3 _&_ II.6 - Payment for young farmers – Title III, Chapter 5",EAGF,3,,
+42697,anoniem_936005235,334.95,3.7361307273990006e-07,EERSEL,a88cdc4d55d3056d5362a34ca28b5dea865daf05 _&_ e494e36044d922b6495fa5ab9f9bb797de6a1a91,"II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3 _&_ II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5",EAGF,2,,
+42698,anoniem_940620689,329.3,3.673108967107004e-07,MAASHORST,a88cdc4d55d3056d5362a34ca28b5dea865daf05 _&_ e494e36044d922b6495fa5ab9f9bb797de6a1a91,"II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3 _&_ II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5",EAGF,2,,
+42699,anoniem_776466109,318.44000000000005,3.5519733358200864e-07,KOGGENLAND,e494e36044d922b6495fa5ab9f9bb797de6a1a91 _&_ a88cdc4d55d3056d5362a34ca28b5dea865daf05,"II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5 _&_ II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3",EAGF,2,,
+42700,anoniem_735757675,312.13,3.481589741582475e-07,HARDENBERG,0085061858c2f35b3ef2ce168a8cd7dfc241df93,VI.22 EAFRD,EAFRD,1,,
+42701,anoniem_870310761,293.59,3.2747891334738694e-07,DEURNE,0085061858c2f35b3ef2ce168a8cd7dfc241df93,VI.22 EAFRD,EAFRD,1,,
+42702,anoniem_776382507,283.37,3.1607922502554255e-07,BORGER-ODOORN,a88cdc4d55d3056d5362a34ca28b5dea865daf05 _&_ e494e36044d922b6495fa5ab9f9bb797de6a1a91,"II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3 _&_ II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5",EAGF,2,,
+42703,anoniem_949284975,254.91000000000005,2.8433410470854737e-07,DALFSEN,a88cdc4d55d3056d5362a34ca28b5dea865daf05 _&_ e494e36044d922b6495fa5ab9f9bb797de6a1a91,"II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3 _&_ II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5",EAGF,2,,
+42704,anoniem_988043660,143.14,1.596625622689634e-07,ALPHEN AAN DEN RIJN,a88cdc4d55d3056d5362a34ca28b5dea865daf05 _&_ e494e36044d922b6495fa5ab9f9bb797de6a1a91,"II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3 _&_ II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5",EAGF,2,,
+42705,anoniem_943010821,139.78,1.5591471953301458e-07,DEURNE,0085061858c2f35b3ef2ce168a8cd7dfc241df93,VI.22 EAFRD,EAFRD,1,,
+42706,anoniem_779825136,127.47,1.4218378379505914e-07,EERSEL,e6ba1b4fb639ff4b54508a6e004c972aab9aadfc,A.1 EAGF,EAGF,1,,
+42707,anoniem_738964025,95.98,1.0705891243939575e-07,RUCPHEN,e6ba1b4fb639ff4b54508a6e004c972aab9aadfc,A.1 EAGF,EAGF,1,,
+42708,anoniem_713721009,90.0,1.0038864471291537e-07,LEUDAL,e6ba1b4fb639ff4b54508a6e004c972aab9aadfc,A.1 EAGF,EAGF,1,,
+42709,anoniem_955022677,82.88,9.244678748673806e-08,MOLENLANDEN,12e667f2468f92e4442ccc751d739bf51c34b896,VI.24 EAFRD,EAFRD,1,,
+42710,anoniem_760730469,28.87,3.220244636513186e-08,AALTEN,e6ba1b4fb639ff4b54508a6e004c972aab9aadfc,A.1 EAGF,EAGF,1,,
+42711,anoniem_759868389,25.84,2.8822695326463705e-08,MEIERIJSTAD,e6ba1b4fb639ff4b54508a6e004c972aab9aadfc,A.1 EAGF,EAGF,1,,
+42712,schapenhouderij an de diek,19.3599999999999,2.1594712907133684e-08,KAMPEN,a88cdc4d55d3056d5362a34ca28b5dea865daf05 _&_ fd738ce477679012557d9a4f69bd39a1f91bee83 _&_ e6ba1b4fb639ff4b54508a6e004c972aab9aadfc _&_ e494e36044d922b6495fa5ab9f9bb797de6a1a91 _&_ c622603023459ffbd7d5413130ce7c1f7fa2d262,"II.4 - Payment for agricultural practices beneficial for the climate and the environment  Title III, Chapter 3 _&_ II.7b EAGF _&_ A.1 EAGF _&_ II.1 - Basic payment scheme - Title III, Sections 1, 2, 3 and 5 _&_ II.6 - Payment for young farmers – Title III, Chapter 5",EAGF,5,,
+42713,anoniem_985245138,10.1,1.1265836795560502e-08,SIMPELVELD,e6ba1b4fb639ff4b54508a6e004c972aab9aadfc,A.1 EAGF,EAGF,1,,

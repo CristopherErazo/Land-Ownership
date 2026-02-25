@@ -67,7 +67,7 @@ To get a first insight of the data, we created two plots showing several summary
         </div>
         
     </div>
-    
+
 
 .. _box-plots:
 
@@ -97,6 +97,74 @@ Since the distribution of subsidies is highly skewed, we used a logarithmic scal
         <div style="width: 100%;">
             <div style="position: relative; width: 100%; padding-bottom: 116.67%; height: 0;">
                 <iframe src="_static/plots/box_plot_2024.html"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                </iframe>
+            </div>
+        </div>
+        
+    </div>
+
+Tables
+~~~~~~~~~~~~~~~~~~
+
+To get a more detailed view of the distribution of subsidies in each country, we created tables showing the top and bottom 20 recipients of subsidies in each country for the years 2023 and 2024. The tables show the name of the recipient, the total amount of subsidies received, the percentage of the total amount of subsidies received by each recipient, and the adress.
+
+.. raw:: html
+
+    <h2 style="text-align: center; margin-bottom: 5px;">Top and Bottom Recipients</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr; gap: 10px; max-width: 1600px; margin: 0 auto;">
+        
+        <!-- 2023 Table -->
+        <div style="width: 100%;">
+            <div style="position: relative; width: 100%; padding-bottom: 53%; height: 0;">
+                <iframe src="_static/plots/table_plot_2023.html"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                </iframe>
+            </div>
+        </div>
+        
+        <!-- 2024 Table -->
+        <div style="width: 100%;">
+            <div style="position: relative; width: 100%; padding-bottom: 53%; height: 0;">
+                <iframe src="_static/plots/table_plot_2024.html"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                </iframe>
+            </div>
+        </div>
+        
+    </div>
+
+test after adding some text to test spaces
+
+shomething else
+ 
+
+
+Pie Plots
+~~~~~~~~~~~~~~~~~~
+
+To get a better understanding of the distribution of subsidies in each country, we created pie plots for each country and year. The pie plots show the percentage of the total amount of subsidies given to each scheme in each country. You can hover over the pie plots to see the exact values of these percentages, as well.
+
+.. raw:: html
+
+    <h2 style="text-align: center; margin-bottom: 5px;">Distribution of Schemes</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1600px; margin: 0 auto;">
+        
+        <!-- Left Column -->
+        <div style="width: 100%;">
+            <div style="position: relative; width: 100%; padding-bottom: 116.67%; height: 0;">
+                <iframe src="_static/plots/pie_plot_2023.html"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
+                </iframe>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div style="width: 100%;">
+            <div style="position: relative; width: 100%; padding-bottom: 116.67%; height: 0;">
+                <iframe src="_static/plots/pie_plot_2024.html"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
                 </iframe>
             </div>

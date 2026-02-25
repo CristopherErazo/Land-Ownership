@@ -1,5 +1,5 @@
 import pandas as pd
-
+import numpy as np
 
 countries = {
     'names': ['Austria', 'Belgium', 'Bulgaria', 'Czechia', 'Germany','Denmark','Estonia', 'Spain',
@@ -32,6 +32,21 @@ def clean_dataframe(df: pd.DataFrame, columns_to_keep: list) -> pd.DataFrame:
     df = df[columns_to_keep]
     return df
 
+def get_scheme_columns(df: pd.DataFrame) -> list:
+    """
+    Searches for all columns containing 'scheme' in their name and returns only those without NaN values.
+    
+    :param df: Dataframe to search for scheme columns
+    
+    :return valis_scheme_cols: List of scheme column names that have no NaN values
+    """
+    scheme_cols = [col for col in df.columns if 'scheme' in col.lower()]
+    valid_scheme_cols = [col for col in scheme_cols if df[col].notna().any()]
+
+    # Eliminate schemes with 'code' in their name
+    valid_scheme_cols = [col for col in valid_scheme_cols if 'code' not in col.lower()]
+    return valid_scheme_cols
+
 def summary_statistics(df: pd.DataFrame) -> pd.DataFrame:
     """
     Generates summary statistics for the given dataframe.
@@ -43,3 +58,20 @@ def summary_statistics(df: pd.DataFrame) -> pd.DataFrame:
     """
     summary_df = df.describe()
     return summary_df
+
+
+
+def fmt_fraction(x, sci_threshold=1e-3):
+    if x == 0 or abs(x) >= sci_threshold:
+        return f"{x:.3f}"
+    return f"{x:.3e}"
+
+def fmt_amount(x):
+    if x >= 1e9:
+        return f"{x/1e9:.2f}B"
+    elif x >= 1e6:
+        return f"{x/1e6:.2f}M"
+    elif x >= 1e3:
+        return f"{x/1e3:.2f}K"
+    else:
+        return f"{x:.2f}"
