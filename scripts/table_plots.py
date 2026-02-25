@@ -95,7 +95,7 @@ def create_figure_with_dropdown(year: int, countries: list, settings:dict):
     # Create buttons for the dropdown
     buttons = []
     for country in countries:
-        # load data for the country and year
+        # load data for the country and year and create the table
         dir_path = f'./data/farm_subsidy_top_bottom/{year}/{country.lower().replace(' ','_')}.csv'
         if not Path(dir_path).exists():
             print(f"Data file for {country} in {year} not found at {dir_path}. Skipping.")
