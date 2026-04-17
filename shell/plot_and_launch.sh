@@ -11,6 +11,7 @@ if [[ "$create_plots" == "y" ]]; then
     echo "Creating plots..."
     # python ./scripts/europe_map_plots.py
     python ./scripts/europe_map_plots_new.py
+    python ./scripts/density_plots.py
     python ./scripts/box_plots.py
     python ./scripts/table_plots.py
     python ./scripts/pie_plots.py

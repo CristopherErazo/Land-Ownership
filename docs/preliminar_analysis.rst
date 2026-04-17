@@ -114,6 +114,162 @@ To get a first insight of the data, we created two plots showing several summary
     </script>
 
 
+Distributions
+~~~~~~~~~~~~~~~~~~
+
+
+.. raw:: html
+    <h2 style="text-align: center; margin-bottom: 5px;">Subsidy Distribution</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr; gap: 10px; max-width: 800px; margin: 0 auto;">
+       
+        <select id="countrySelector" onchange="showMap()">
+            <option value="austria">Austria</option>
+            <option value="belgium">Belgium</option>
+            <option value="bulgaria">Bulgaria</option>
+            <option value="croatia">Croatia</option>
+            <option value="czechia">Czechia</option>
+            <option value="denmark">Denmark</option>
+            <option value="estonia">Estonia</option>
+            <option value="finland">Finland</option>
+            <option value="france">France</option>
+            <option value="germany">Germany</option>
+            <option value="greece">Greece</option>
+            <option value="hungary">Hungary</option>
+            <option value="ireland">Ireland</option>
+            <option value="italy">Italy</option>
+            <option value="latvia">Latvia</option>
+            <option value="lithuania">Lithuania</option>
+            <option value="luxembourg">Luxembourg</option>
+            <option value="netherlands">Netherlands</option>
+            <option value="poland">Poland</option>
+            <option value="portugal">Portugal</option>
+            <option value="romania">Romania</option>
+            <option value="slovakia">Slovakia</option>
+            <option value="spain">Spain</option>
+            <option value="sweden">Sweden</option>
+            <option value="uk">United Kingdom</option>
+            
+        </select>
+
+        <div id="kde-austria" style="display: block; height: 800px;">
+            <iframe src="_static/plots/kde_Austria.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-belgium" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Belgium.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-bulgaria" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Bulgaria.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-croatia" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Croatia.png" width="750" height="750" style="border: 0;"></iframe>   
+        </div>
+
+        <div id="kde-czechia" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Czechia.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-denmark" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Denmark.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-estonia" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Estonia.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-finland" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Finland.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-france" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_France.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-germany" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Germany.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-greece" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Greece.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-hungary" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Hungary.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-ireland" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Ireland.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-italy" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Italy.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-latvia" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Latvia.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-lithuania" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Lithuania.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-luxembourg" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Luxembourg.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-netherlands" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Netherlands.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-poland" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Poland.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-portugal" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Portugal.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-romania" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Romania.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-slovakia" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Slovakia.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-spain" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Spain.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-sweden" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_Sweden.png" width="750" height="750" style="border: 0;"></iframe>
+        </div>
+
+        <div id="kde-uk" style="display: none; height: 800px;">
+            <iframe src="_static/plots/kde_UK.png" width="750" height="750" style="border: 0;"></iframe>        
+        </div>
+
+        
+    </div>
+
+
+    <script>
+    function showMap() {
+        const value = document.getElementById("countrySelector").value;
+
+        document.querySelectorAll("[id^='kde-']").forEach(div => {
+            div.style.display = "none";
+        });
+
+        document.getElementById("kde-" + value).style.display = "block";
+    }
+    </script>
+
+some extra text
+
 .. _box-plots:
 
 Box Plots

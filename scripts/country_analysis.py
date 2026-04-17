@@ -2,6 +2,8 @@ import pandas as pd
 from pathlib import Path
 import numpy as np
 import sqlite3
+from scipy.stats import gaussian_kde
+import pickle
 
 from land_ownership.utils import countries , clean_dataframe
 from land_ownership.measures import compute_gini
@@ -39,8 +41,11 @@ def main():
     print(f"Connected to database: {db_path}")
 
     # Loop through each country and year
+    dict_results = {}
     for year in years:
+        dict_results[year] = {}
         for abbr , country in zip(countries['abbreviations'], countries['names']):
+
             print(f"Processing data for {country} in {year}...")
             # Load the dataset for the current country and year aggregated by recipient_name
             query = f"""
@@ -65,6 +70,17 @@ def main():
             if len(df_recipients) == 0:
                 print(f"No data found for {country} in {year}. Skipping.")
                 continue
+
+            # Log-transform the amounts for better handling of skewed distributions
+            amount = np.array(df_recipients['total_amount'])
+            log_amount = np.log10(amount) 
+
+            # Make density estimation using Gaussian KDE
+            kde = gaussian_kde(log_amount)
+            x_values = np.linspace(log_amount.min(), log_amount.max(), 200)
+            y_values = kde(x_values)
+            # Store the results for the current country and year
+            dict_results[year][country] = (x_values, y_values)
 
             # Total subsidy
             total_subsidy = df_recipients["total_amount"].sum()
@@ -105,6 +121,11 @@ def main():
     Path(dir_path).mkdir(parents=True, exist_ok=True)
     file_path = dir_path + 'summary_statistics_per_country.csv'
     results_df.to_csv(file_path, index=False)
+
+    # save dict_results to a pickle file for later use in plotting
+    
+    with open(dir_path + 'kde_results.pkl', 'wb') as f:
+        pickle.dump(dict_results, f)
 
 
 if __name__ == "__main__": 
