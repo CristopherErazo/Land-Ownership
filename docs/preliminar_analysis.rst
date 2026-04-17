@@ -69,6 +69,40 @@ To get a first insight of the data, we created two plots showing several summary
     </div>
 
 
+*New plot with all data.*
+
+.. raw:: html
+
+    <select id="mapSelector" onchange="showMap()">
+        <option value="total">Total Subsidies</option>
+        <option value="mean">Average</option>
+        <option value="gini">Gini</option>
+    </select>
+
+    <div id="map-total">
+        <iframe src="_static/plots/interactive_map_total.html" width="900" height="700"></iframe>
+    </div>
+
+    <div id="map-mean" style="display:none;">
+        <iframe src="_static/plots/interactive_map_mean.html" width="900" height="700"></iframe>
+    </div>
+
+    <div id="map-gini" style="display:none;">
+        <iframe src="_static/plots/interactive_map_gini.html" width="900" height="700"></iframe>
+    </div>
+
+    <script>
+    function showMap() {
+        const value = document.getElementById("mapSelector").value;
+
+        document.querySelectorAll("[id^='map-']").forEach(div => {
+            div.style.display = "none";
+        });
+
+        document.getElementById("map-" + value).style.display = "block";
+    }
+    </script>
+
 .. _box-plots:
 
 Box Plots
