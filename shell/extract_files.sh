@@ -3,8 +3,8 @@
 # Decompress and rename .gz files
 
 DIRS=(
-    "./data/farm_subsidy/2023"
-    "./data/farm_subsidy/2024")
+    "./data_raw/farm_subsidy/2016"
+    "./data_raw/farm_subsidy/2017")
 
 for dir in "${DIRS[@]}"; do
     if [ -d "$dir" ]; then
@@ -27,6 +27,18 @@ for dir in "${DIRS[@]}"; do
                 if [ -f "$file" ]; then
                     rm "$file"
                 fi
+            fi
+        done
+
+        # For csv files just change the name
+        for file in *.csv; do
+            if [ -f "$file" ]; then
+                # Extract country code (first 2 characters)
+                country="${file:0:2}"
+                
+                # Rename to country code only
+                mv "$file" "$country.csv"
+                echo "  $file → $country.csv"
             fi
         done
         
