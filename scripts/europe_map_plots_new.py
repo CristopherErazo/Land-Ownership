@@ -7,15 +7,8 @@ from pathlib import Path
 # -------------------------
 # CREATE MAP TRACE
 # -------------------------
-def create_choropleth(df, variable, var_min, var_max,settings):
+def create_choropleth(df, variable, var_min, var_max,settings,x=0.5, y=-0.1):
 
-    # var_min = df[variable].dropna().min() * settings[variable]['amin']
-
-    # if variable in ['Top 1%', 'Top 5%', 'Top 10%', 'gini']:
-    #     var_max = df[variable].dropna().max()
-    # else:
-    #     second_largest = df[variable].dropna().nlargest(2).iloc[-1]
-    #     var_max = second_largest * settings[variable]['amax']
 
     return go.Choropleth(
         locations=df['ISO_A3'],
@@ -26,10 +19,10 @@ def create_choropleth(df, variable, var_min, var_max,settings):
         colorbar=dict(
             # title=dict(text=settings[variable]['label'], side="bottom"),
             thickness=15,
-            len=1.07,
+            len=1.0,
             orientation='h',
-            x=0.5,
-            y=-0.1,
+            x=x,
+            y=y,
         ),
     )
 
@@ -43,7 +36,7 @@ def define_layout(settings, variable):
         title=dict(
             text=settings[variable]['label'],
             x=0.5,
-            y=0.92,
+            y=0.95,
             xanchor='center',
             font=dict(family='Computer Modern', size=28)
         ),
@@ -67,10 +60,13 @@ def define_layout(settings, variable):
 # -------------------------
 # CREATE FIGURE (ONE VARIABLE)
 # -------------------------
-def create_figure_for_variable(df, years, variable, settings):
+def create_figure_for_variable(df, years, variable, settings,padt=60):
 
     var_min = df[variable].dropna().min() * settings[variable]['amin']
-    var_max = df[variable].dropna().max() * settings[variable]['amax']
+    
+    second_largest = df[variable].dropna().nlargest(2).iloc[-1]
+    var_max = second_largest * settings[variable]['amax']
+
     initial_year = years[0]
     df_initial = df[df['year'] == initial_year]
 
@@ -102,7 +98,7 @@ def create_figure_for_variable(df, years, variable, settings):
         dict(
             active=0,
             currentvalue={"prefix": "Year: ", "font": {"size": 20}},
-            pad={"t": 70},
+            pad={"t": padt},
             steps=[
                 dict(
                     label=str(year),
@@ -169,7 +165,7 @@ if __name__ == "__main__":
         settings[key]['label'] = f'% of Subsidy to {key}'
 
     settings['color_scale'] = 'Greens'
-    settings['width'] = 800
+    settings['width'] = 550
     settings['height_proportion'] = 1.2
 
     # Years

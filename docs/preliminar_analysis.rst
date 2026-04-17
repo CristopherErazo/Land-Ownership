@@ -42,54 +42,64 @@ To get a first insight of the data, we created two plots showing several summary
 
 *In the datasets there were some times entries with negative values. For this analysis we filtered them out.*
 
-.. raw:: html
-
-    <h2 style="text-align: center; margin-bottom: 5px;">Farm Subsidies Summary Statistics</h2>
-    
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1600px; margin: 0 auto;">
-        
-        <!-- Left Column -->
-        <div style="width: 100%;">
-            <div style="position: relative; width: 100%; padding-bottom: 116.67%; height: 0;">
-                <iframe src="_static/plots/map_subsidies_2023.html"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
-                </iframe>
-            </div>
-        </div>
-        
-        <!-- Right Column -->
-        <div style="width: 100%;">
-            <div style="position: relative; width: 100%; padding-bottom: 116.67%; height: 0;">
-                <iframe src="_static/plots/map_subsidies_2024.html"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
-                </iframe>
-            </div>
-        </div>
-        
-    </div>
-
 
 *New plot with all data.*
 
 .. raw:: html
+    <h2 style="text-align: center; margin-bottom: 5px;">Top and Bottom Recipients</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr; gap: 10px; max-width: 800px; margin: 0 auto;">
+       
+        <select id="mapSelector" onchange="showMap()">
+            <option value="total">Total Subsidies</option>
+            <option value="mean">Average</option>
+            <option value="max">Max</option>
+            <option value="count">Count</option>
+            <option value="top1%">Top 1%</option>
+            <option value="top5%">Top 5%</option>
+            <option value="top10%">Top 10%</option>
+            <option value="gini">Gini</option>
+            <option value="tot_per_h">Total per hectare</option>
+        </select>
 
-    <select id="mapSelector" onchange="showMap()">
-        <option value="total">Total Subsidies</option>
-        <option value="mean">Average</option>
-        <option value="gini">Gini</option>
-    </select>
+        <div id="map-total" style="display: block; height: 700px;">
+            <iframe src="_static/plots/interactive_map_total.html" width="600" height="700" style="border: 0;"></iframe>
+        </div>
 
-    <div id="map-total">
-        <iframe src="_static/plots/interactive_map_total.html" width="900" height="700"></iframe>
+        <div id="map-mean" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_mean.html" width="600" height="700" style="border: 0;"></iframe>
+        </div>
+
+        <div id="map-gini" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_gini.html" width="600" height="700" style="border: 0;"></iframe>
+        </div>
+
+        <div id="map-max" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_max.html" width="600" height="700" style="border: 0;"></iframe>
+        </div>
+
+        <div id="map-count" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_count.html" width="600" height="700" style="border: 0;"></iframe>   
+        </div>  
+
+        <div id="map-top1%" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_top_1pct.html" width="600" height="700" style="border: 0;"></iframe>    
+        </div>
+
+        <div id="map-top5%" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_top_5pct.html" width="600" height="700" style="border: 0;"></iframe>    
+        </div>
+        
+        <div id="map-top10%" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_top_10pct.html" width="600" height="700" style="border: 0;"></iframe>   
+        </div>
+        
+        <div id="map-tot_per_h" style="display: none; height: 700px;">
+            <iframe src="_static/plots/interactive_map_tot_per_h.html" width="600" height="700" style="border: 0;"></iframe>   
+        </div>
+        
     </div>
 
-    <div id="map-mean" style="display:none;">
-        <iframe src="_static/plots/interactive_map_mean.html" width="900" height="700"></iframe>
-    </div>
-
-    <div id="map-gini" style="display:none;">
-        <iframe src="_static/plots/interactive_map_gini.html" width="900" height="700"></iframe>
-    </div>
 
     <script>
     function showMap() {
@@ -102,6 +112,7 @@ To get a first insight of the data, we created two plots showing several summary
         document.getElementById("map-" + value).style.display = "block";
     }
     </script>
+
 
 .. _box-plots:
 
