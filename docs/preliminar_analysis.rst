@@ -113,6 +113,8 @@ To get a first insight of the data, we created two plots showing several summary
     }
     </script>
 
+    
+
 
 Distributions
 ~~~~~~~~~~~~~~~~~~
@@ -123,7 +125,7 @@ Distributions
     
     <div style="display: grid; grid-template-columns: 1fr; gap: 10px; max-width: 800px; margin: 0 auto;">
        
-        <select id="countrySelector" onchange="showMap()">
+        <select id="countrySelector" onchange="showCountry()">
             <option value="austria">Austria</option>
             <option value="belgium">Belgium</option>
             <option value="bulgaria">Bulgaria</option>
@@ -252,12 +254,12 @@ Distributions
             <iframe src="_static/plots/kde_UK.png" width="750" height="750" style="border: 0;"></iframe>        
         </div>
 
-        
+
     </div>
 
 
     <script>
-    function showMap() {
+    function showCountry() {
         const value = document.getElementById("countrySelector").value;
 
         document.querySelectorAll("[id^='kde-']").forEach(div => {

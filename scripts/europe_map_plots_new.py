@@ -64,7 +64,7 @@ def create_figure_for_variable(df, years, variable, settings,padt=60):
 
     var_min = df[variable].dropna().min() * settings[variable]['amin']
     
-    second_largest = df[variable].dropna().nlargest(2).iloc[-1]
+    second_largest = df[variable].dropna().nlargest(3).iloc[-1]
     var_max = second_largest * settings[variable]['amax']
 
     initial_year = years[0]
