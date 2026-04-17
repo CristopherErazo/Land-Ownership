@@ -9,7 +9,7 @@ logs/
 data_raw/
 docs/_build/
 docs/_static/plots/
-src/configurations
+# src/configurations
 notebooks/
 # data/
 info.txt
