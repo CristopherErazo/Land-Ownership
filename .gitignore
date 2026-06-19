@@ -9,9 +9,12 @@ logs/
 data_raw/
 docs/_build/
 docs/_static/plots/
-# src/configurations
-notebooks/
-# data/
+
+
 info.txt
+notebooks/
+!notebooks/26_04_28_Tutorial.ipynb
+
+
 
 
